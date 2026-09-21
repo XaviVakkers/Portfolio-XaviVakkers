@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abonnement afsluiten</title>
+</head>
+
+<body>
+
+    <form id="subscriptionForm">
+
+        <h1>Je abonnement binnen 5 minuten geregeld</h1>
+
+        <p>
+            <label for="firstName">Voornaam</label><br>
+            <input type="text" id="firstName" name="firstName" pattern="[A-Za-zÀ-ÿ '-]+" required>
+        </p>
+
+        <p>
+            <label for="lastName">Achternaam</label><br>
+            <input type="text" id="lastName" name="lastName" pattern="[A-Za-zÀ-ÿ '-]+" required>
+        </p>
+
+        <p>Aanhef</p>
+
+        <label>
+            <input type="radio" name="title" value="Dhr." required>
+            Dhr.
+        </label>
+
+        <label>
+            <input type="radio" name="title" value="Mevr.">
+            Mevr.
+        </label>
+
+        <label>
+            <input type="radio" name="title" value="Anders">
+            Anders
+        </label>
+
+        <p>
+            <label for="address">Straat en huisnummer</label><br>
+            <input type="text" id="address" name="address" placeholder="Bijvoorbeeld: Kerkstraat 12" required>
+        </p>
+
+        <p>
+            <label for="postcode">Postcode</label><br>
+            <small>Voer een postcode in van 1000 AA tot 9999 ZZ</small><br>
+            <input type="text" id="postcode" name="postcode" placeholder="1234 AB"
+                pattern="[1-9][0-9]{3}\s?(?![sS][sSdDaA])[A-Za-z]{2}"
+                title="Vul een geldige Nederlandse postcode in, bijvoorbeeld 1234 AB" required>
+        </p>
+
+        <p>
+            <label for="city">Woonplaats</label><br>
+            <input type="text" id="city" name="city" required>
+        </p>
+
+        <p>
+            <label for="country">Land</label><br>
+            <select id="country" name="country" required>
+                <option value="">Maak een keuze</option>
+                <option value="NL">Nederland</option>
+                <option value="BE">België</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="iban">IBAN-nummer</label><br>
+            <input type="text" id="iban" name="iban" placeholder="NL00BANK0123456789"
+                pattern="NL[0-9]{2}[A-Z]{4}[0-9]{10}" maxlength="18"
+                title="Vul een Nederlandse IBAN in zonder spaties, bijvoorbeeld NL00BANK0123456789" required>
+        </p>
+
+        <p>Type abonnement</p>
+
+        <label>
+            <input type="checkbox" name="subscription" value="Mobiel">
+            Mobiel
+        </label>
+
+        <label>
+            <input type="checkbox" name="subscription" value="Glasvezel">
+            Glasvezel
+        </label>
+
+        <label>
+            <input type="checkbox" name="subscription" value="TV">
+            TV
+        </label>
+
+        <p>
+            <label for="startDate">Datum van ingang abonnement</label><br>
+            <input type="date" id="startDate" name="startDate" required>
+        </p>
+
+        <p>
+            <label for="duration">Looptijd in maanden</label><br>
+            <input type="number" id="duration" name="duration" min="1" step="1" required>
+        </p>
+
+        <p>
+            <label for="users">Hoeveel gebruikers?</label><br>
+            <small>Maximaal 4 gebruikers</small><br>
+            <input type="number" id="users" name="users" min="1" max="4" step="1" value="1" required>
+        </p>
+
+        <p>
+            <label for="email">E-mailadres</label><br>
+            <input type="email" id="email" name="email" required>
+        </p>
+
+        <p>
+            <label for="password">Wachtwoord aanmaken</label><br>
+            <input type="password" id="password" name="password" minlength="8" required>
+        </p>
+
+        <button type="submit">Abonnement afsluiten</button>
+
+    </form>
+
+    <script>
+        const form = document.getElementById("subscriptionForm");
+        const dateInput = document.getElementById("startDate");
+
+        // Vandaag instellen als vroegst mogelijke startdatum
+        const today = new Date();
+        const year = today.getFullYear();
+        const month = String(today.getMonth() + 1).padStart(2, "0");
+        const day = String(today.getDate()).padStart(2, "0");
+
+        dateInput.min = `${year}-${month}-${day}`;
+
+        // Controleren of minstens één abonnement is geselecteerd
+        form.addEventListener("submit", function (event) {
+            const subscriptions = document.querySelectorAll(
+                'input[name="subscription"]:checked'
+            );
+
+            if (subscriptions.length === 0) {
+                event.preventDefault();
+                alert("Kies minstens één type abonnement.");
+            }
+        });
+    </script>
+
+</body>
+
+</html>
