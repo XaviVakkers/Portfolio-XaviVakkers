@@ -1,0 +1,21 @@
+h2 {
+    font-size: 56px;
+    color: #9000ff;
+}
+
+p {
+    color: #0d0303;
+    font-size: 28px;
+}
+
+a {
+    color: #7272dd;
+}
+
+body {
+    font-family: "ftltlt";
+}
+
+h2:hover {
+    color: aqua;
+}
