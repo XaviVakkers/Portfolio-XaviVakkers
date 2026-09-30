@@ -11,6 +11,15 @@
 <body>
 
     <header>
+        <select onchange="location = this.value;">
+            <option>Kies een pagina</option>
+            <option value="index.html">Hoofdpagina</option>
+            <option value="hobby's.html">Hobby's</option>
+            <option value="sport.html">Sport</option>
+            <option value="voetbal.html">Voetbal</option>
+            <option value="muziek.html">Muziek</option>
+            <option value="konijnen.html">Konijnen</option>
+        </select>
         <h1>Xavi Vakkers</h1>
     </header>
 
@@ -18,7 +27,7 @@
         <ul>
             <li><a href="index.html">Hoofdpagina</a></li>
             <li><a href="hobby's.html">Hobby's</a></li>
-            <li><a href="sport.html">Sport</a></li>
+            <li><a class="click" href="sport.html">Sport</a></li>
             <li><a href="voetbal.html">Voetbal</a></li>
             <li><a href="muziek.html">Muziek</a></li>
             <li><a href="konijnen.html">Konijnen</a></li>
@@ -35,11 +44,11 @@
     </div>
 
     <footer>
-        <p>
-            <strong>Gemaakt door Xavi Vakkers</strong><br>
-            Telefoon: +31 6 41762908<br>
-            E-mail: 9033068@student.zadkine.nl
-        </p>
+        <ul>
+            <li><b>Gemaakt door Xavi Vakkers</b></li>
+            <li>Telefoon: +31 6 41762908</li>
+            <li>E-mail: 9033068@student.zadkine.nl</li>
+        </ul>
     </footer>
 
 </body>

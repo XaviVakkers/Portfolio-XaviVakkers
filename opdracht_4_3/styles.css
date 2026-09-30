@@ -1,0 +1,76 @@
+header {
+    font-family: "ftltlt";
+    background-size: 100%;
+    font-size: 60px;
+}
+
+nav {
+    font-family: "ftltlt";
+}
+
+section {
+    font-family: "ftltlt";
+}
+
+footer {
+    font-family: "ftltlt";
+    background-color: #9000ff;
+    height: 50px;
+}
+
+button {
+    font-family: "ftltlt";
+}
+
+table {
+    background-color: #7272dd;
+    background-size: 100%;
+    width: 100%;
+    font-size: 32px;
+}
+
+body {
+    color: white;
+    background-color: black;
+}
+
+.under-section {
+    background-color: #f5f7fa;
+}
+
+.under-body {
+    color: black;
+}
+
+b {
+    color: #31e7ba;
+}
+
+.button2 button {
+    background-color: #9000ff;
+    color: white;
+    font-size: 18px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.button1 button {
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    padding: 15px 30px;
+    border: white: 2px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.button-container {
+    display: flex;
+    gap: 20px;
+}
+
+h2 {
+    font-size: 32px;
+}

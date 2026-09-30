@@ -11,6 +11,15 @@
 <body>
 
     <header>
+        <select onchange="location = this.value;">
+            <option>Kies een pagina</option>
+            <option value="index.html">Hoofdpagina</option>
+            <option value="hobby's.html">Hobby's</option>
+            <option value="sport.html">Sport</option>
+            <option value="voetbal.html">Voetbal</option>
+            <option value="muziek.html">Muziek</option>
+            <option value="konijnen.html">Konijnen</option>
+        </select>
         <h1>Xavi Vakkers</h1>
     </header>
 
@@ -21,24 +30,44 @@
             <li><a href="sport.html">Sport</a></li>
             <li><a href="voetbal.html">Voetbal</a></li>
             <li><a href="muziek.html">Muziek</a></li>
-            <li><a href="konijnen.html">Konijnen</a></li>
+            <li><a class="click" href="konijnen.html">Konijnen</a></li>
         </ul>
     </nav>
 
 
     <article>
-        <h2><b>Konijnen</b></h2>
-        <h3>Bobo</h3>
-        <h3>Bonnie</h3>
+        <h2>Konijnen</h2>
+        <h3>Bobo & Bonnie</h3>
+
+        <div class="konijnen-galerij">
+            <img src="foto/konijn-b&b-1.JPEG" alt="Bobo en Bonnie in de tuin">
+
+            <img src="foto/konijn-b&b-3.JPEG" alt="Bobo en Bonnie die wachten op eten">
+
+            <img src="foto/konijn-b&b-4.JPEG" alt="Bobo en Bonnie die sla eten">
+
+            <img src="foto/konijn-b&b-5.JPEG" alt="Bobo en Bonnie die op schoot zitten">
+
+            <img src="foto/konijn-bobo-1.JPEG" alt="Bobo die een blaadje eet">
+
+            <img src="foto/konijn-bobo-2.JPEG" alt="Bobo die wordt opgepakt door zijn baasje">
+
+            <img src="foto/konijn-bobo-3.JPEG" alt="Bobo die slaapt">
+
+            <img src="foto/konijn-bonnie-1.JPEG" alt="Bonnie met haar neus door het hek">
+
+            <img src="foto/konijn-bonnie-6.JPEG" alt="Bonnie die om meer eten vraagt">
+        </div>
+        <br>
     </article>
-    </div>
+
 
     <footer>
-        <p>
-            <b>Gemaakt door Xavi Vakkers</b><br>
-            Telefoon: +31 6 41762908<br>
-            E-mail: 9033068@student.zadkine.nl
-        </p>
+        <ul>
+            <li><b>Gemaakt door Xavi Vakkers</b></li>
+            <li>Telefoon: +31 6 41762908</li>
+            <li>E-mail: 9033068@student.zadkine.nl</li>
+        </ul>
     </footer>
 
 </body>

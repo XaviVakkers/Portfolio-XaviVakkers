@@ -9,14 +9,22 @@
 </head>
 
 <body>
-
     <header>
+        <select onchange="location = this.value;">
+            <option>Kies een pagina</option>
+            <option value="index.html">Hoofdpagina</option>
+            <option value="hobby's.html">Hobby's</option>
+            <option value="sport.html">Sport</option>
+            <option value="voetbal.html">Voetbal</option>
+            <option value="muziek.html">Muziek</option>
+            <option value="konijnen.html">Konijnen</option>
+        </select>
         <h1>Xavi Vakkers</h1>
     </header>
 
     <nav class="top-nav">
         <ul>
-            <li><a href="index.html">Hoofdpagina</a></li>
+            <li><a class="click" href="index.html">Hoofdpagina</a></li>
             <li><a href="hobby's.html">Hobby's</a></li>
             <li><a href="sport.html">Sport</a></li>
             <li><a href="voetbal.html">Voetbal</a></li>
@@ -27,36 +35,38 @@
 
     <div class="content">
         <aside class="side-nav">
-            <h2>Schooltijden</h2>
+            <span class="bold-text">
+                <h2>Schooltijden</h2>
+                <p>
+                <p>MA: 12:45 - 16:30</p>
+                <p>DI: 09:00 - 13:45</p>
+                <p>WO: 10:00 - 16:00</p>
+                <p>DO: 09:00 - 14:45</p>
+                <p>VR: 10:00 - 14:15</p>
+                </p>
+                <br>
+                <div class="social-links">
+                    <p>
+                        <a href="https://www.instagram.com/@xv.sdm" target="_blank">
+                            Instagram - Xavi
+                        </a>
+                    </p>
 
-            <p>
-                <b>MA:</b> 12:45 - 16:30<br>
-                <b>DI:</b> 09:00 - 13:45<br>
-                <b>WO:</b> 10:00 - 16:00<br>
-                <b>DO:</b> 09:00 - 14:45<br>
-                <b>VR:</b> 10:00 - 14:15
-            </p>
-
-            <p>
-                <a href="https://www.instagram.com/@xv.sdm">
-                    <b>Instagram - Xavi</b>
-                </a>
-            </p>
-
-            <p>
-                <a href="https://www.tiktok.com/@xavi_sdm">
-                    <b>TikTok - Xavi</b>
-                </a>
-            </p>
+                    <p>
+                        <a href="https://www.tiktok.com/@xavi_sdm" target="_blank">
+                            TikTok - Xavi
+                        </a>
+                    </p>
+                </div>
+            </span>
         </aside>
 
         <article>
-            <h2><b>Hallo, ik ben Xavi Vakkers!</b></h2>
+            <h2>Hallo, ik ben Xavi Vakkers!</h2>
 
             <p>
                 Mijn naam is Xavi Vakkers en ik ben 16 jaar oud. Ik woon gedeeltelijk in
-                Schiedam en gedeeltelijk in Berkel en Rodenrijs. Beide plaatsen zijn voor
-                mij bekend en voelen als mijn thuis.
+                Schiedam en gedeeltelijk in Berkel en Rodenrijs.
             </p>
 
             <p>
@@ -88,15 +98,15 @@
                 over mijn konijnen Bobo en Bonnie.
             </p>
         </article>
-
+        <img src="foto/vrienden-2.PNG" alt="Foto van Xavi met zijn vrienden" width="35%" height="35%">
     </div>
-
+    <br>
     <footer>
-        <p>
-            <b>Gemaakt door Xavi Vakkers</b><br>
-            Telefoon: +31 6 41762908<br>
-            E-mail: 9033068@student.zadkine.nl
-        </p>
+        <ul>
+            <li><b>Gemaakt door Xavi Vakkers</b></li>
+            <li>Telefoon: +31 6 66666666</li>
+            <li>E-mail: iemand@student.zadkine.nl</li>
+        </ul>
     </footer>
 
 </body>
