@@ -74,3 +74,13 @@ b {
 h2 {
     font-size: 32px;
 }
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-left {
+    width: 55%;
+    height: 100vh;
+}
