@@ -1,6 +1,7 @@
 :root {
   --main-text-color: white;
   --main-font-family: georgia, sans-serif;
+  --main-text-shadow: 2px 2px 4px black;
 }
 
 body {
@@ -23,9 +24,11 @@ header h1 {
   font-family: var(--main-font-family);
   -webkit-text-stroke: 2px rgb(135, 100, 56);
   font-size: 70px;
-  background-image: url("foto/background-1.avif");
-  border: 10px solid rgb(135, 100, 56);
+  background-color: black;
+  background: rgba(0, 0, 0, 0.3);
+  border: 10px solid rgba(162, 117, 62, 0.8);
   border-radius: 40px;
+  text-shadow: var(--main-text-shadow);
 }
 
 .top-nav {
@@ -33,8 +36,9 @@ header h1 {
   width: 100%;
   padding: 15px;
   font-family: var(--main-font-family);
-  background-image: url("foto/background-1.avif");
-  border: 10px solid rgb(135, 100, 56);
+  background-color: black;
+  background: rgba(0, 0, 0, 0.4);
+  border: 10px solid rgba(98, 73, 42, 0.8);
   border-radius: 100px;
   font-size: 25px;
   max-width: 95%;
@@ -48,6 +52,7 @@ header h1 {
   margin: 0;
   padding: 0;
   list-style: none;
+  text-shadow: var(--main-text-shadow);
 }
 
 a {
@@ -72,8 +77,8 @@ a:hover {
   min-height: 600px;
   padding: 10px;
   font-family: var(--main-font-family);
-  background-image: url("foto/background-1.avif");
-  border: 10px solid rgb(135, 100, 56);
+  background: rgba(0, 0, 0, 0.3);
+  border: 10px solid rgba(162, 117, 62, 0.8);
   border-radius: 20px;
 
   h2 {
@@ -81,12 +86,14 @@ a:hover {
     text-align: center;
     color: var(--main-text-color);
     -webkit-text-stroke: 1px rgb(135, 100, 56);
+    text-shadow: var(--main-text-shadow);
   }
 
   p {
     font-size: 20px;
     text-align: center;
     color: var(--main-text-color);
+    text-shadow: var(--main-text-shadow);
   }
 }
 
@@ -123,6 +130,7 @@ article p {
   text-align: center;
   font-size: large;
   padding: 10px;
+  text-shadow: var(--main-text-shadow);
 }
 
 footer {
@@ -130,8 +138,8 @@ footer {
   width: 100%;
   padding: 15px;
   text-align: center;
-  background-image: url("foto/background-1.avif");
-  border: 10px solid rgb(135, 100, 56);
+  background: rgba(0, 0, 0, 0.3);
+  border: 10px solid rgba(162, 117, 62, 0.8);
   border-radius: 20px;
 }
 
@@ -140,6 +148,7 @@ footer li {
   font-size: 25px;
   color: var(--main-text-color);
   font-family: var(--main-font-family);
+  text-shadow: var(--main-text-shadow);
 }
 
 h2 {
@@ -148,6 +157,7 @@ h2 {
   font-family: var(--main-font-family);
   color: var(--main-text-color);
   -webkit-text-stroke: 1px rgb(135, 100, 56);
+  text-shadow: var(--main-text-shadow);
 }
 
 h3 {
@@ -155,6 +165,7 @@ h3 {
   font-size: 25px;
   font-family: var(--main-font-family);
   color: var(--main-text-color);
+  text-shadow: var(--main-text-shadow);
 }
 
 article p {
@@ -162,13 +173,15 @@ article p {
   font-size: 20px;
   font-family: var(--main-font-family);
   color: var(--main-text-color);
+  text-shadow: var(--main-text-shadow);
 }
 
 img {
-  text-align: center;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 8px solid rgba(162, 117, 62, 0.8);
   border-radius: 20px;
-  border: 8px solid rgb(135, 100, 56);
-  margin-left: 20px;
 }
 
 h2:hover {
@@ -221,4 +234,55 @@ option {
   height: auto;
   display: block;
   object-fit: cover;
+}
+
+.images {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+  margin: 20px auto;
+}
+
+.images img {
+  width: 30%;
+  height: auto;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 20px auto;
+}
+
+.image img {
+  width: 15%;
+  height: 15%;
+  height: auto;
+  border-radius: 10px;
+}
+
+table,
+th,
+td {
+  border: 2px solid rgb(203, 203, 203);
+  background-color: rgb(105, 30, 56);
+  text-align: center;
+  margin: auto;
+  color: rgb(186, 167, 167);
+}
+
+@media (max-width: 600px) {
+  .images {
+    flex-wrap: wrap;
+  }
+
+  .images img {
+    width: 80%;
+  }
 }
